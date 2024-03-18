@@ -1,0 +1,581 @@
+/* General CSS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;500;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+:root {
+
+    /* Text Colors */
+    --primary-color: #f9004d ;
+    --secondary-color: #014EBC;
+    --light-pink-color: #FFFCF8;
+    --light-color: #CCCCCC;
+    --black-color: #000;
+    --gradient-dark:linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(34, 33, 33) 78.9%);
+    --white-color: #fff;
+    --box-shadow: 0.1rem -0.07rem 1.5rem 0.3rem rgb(0 0 0 / 26%);
+
+    /* font-family */
+    --primary-font: 'Lato', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+}
+
+body,
+html {
+    font-size: 10px;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    line-height: 1.5;
+    background-color: var(--black-color);
+}
+
+h1 {
+    color: var(--white-color);
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: var(--secondary-font);
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: var(--white-color);
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--secondary-font);
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+h1 span,h2 span,p span ,h7 span{
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.3;
+    font-family: var(--secondary-font);
+    color: cyan;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1;
+    font-family: var(--secondary-font);
+    color:cyan;
+    margin-bottom: 2rem;
+}
+
+h5 {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--white-color);
+    font-family: var(--secondary-font);
+    margin-bottom: 0.9375rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+h7 {
+    color: var(--white-color);
+    font-size: 10rem;
+    font-weight: 700;
+    font-family: var(--secondary-font);
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    color: cyan;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+.btn:focus {
+    text-decoration: none;
+    box-shadow: none;
+    outline: 0;
+}
+
+.bg-black {
+    background-color: var(--black-color);
+}
+
+.main-btn {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+    text-transform: capitalize;
+    padding: 0.9rem 3rem;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    transition: all .3s linear;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+.main-btn:hover {
+    background: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.view-link {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    color: var(--white-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.view-link:hover {
+    color: var(--white-color);
+    font-size: 1.6rem;
+}
+
+
+.wrapper {
+    padding: 7rem 0;
+}
+
+.sec-title h1 {
+    position: relative;
+}
+
+
+
+/* 01 navbar css */
+
+.header {
+    background-color: var(--black-color);
+}
+
+.header .navbar-brand img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+}
+
+
+.header .navbar-nav .nav-link {
+    color: var(--white-color);
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    margin: 0px 0.2rem;
+}
+
+.nav-item:hover>.dropdown-toggle::after,
+.nav-link.dropdown-toggle.show {
+    color: var(--primary-color);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover,
+.header .navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+
+
+.header .navbar-toggler {
+    color: var(--white-color);
+    font-size: 2rem;
+    height: 2.7rem;
+    padding: 0;
+}
+
+.header .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+/*section welcome*/
+/*  Banner Section */
+.banner-wrapper {
+    margin-top: 8rem;
+    background-image: url('bg1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5rem;
+
+}
+.nav-link.btn {
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 50%; /* Creates a circular shape */
+    background-color: #f9004d; /* Pink background color */
+}
+
+.nav-link.btn::before {
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the pseudo-element */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid pink; /* Pink border */
+    z-index: -1; /* Place the pseudo-element below the text */
+}
+/* Define a floating animation logo*/
+@keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Adjust the floating height as needed */
+    }
+  }
+  
+  /* Apply the floating animation to the image */
+  .floating-image {
+    animation: float 3s ease-in-out infinite; /* Adjust the duration and animation timing as needed */
+  }
+  
+
+/*domains section*/
+/* Styling for Club Domains Section */
+.domains-wrapper {
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(8, 8, 8) 90.2%);
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: #f9004d;
+}
+
+.glowing-card {
+    background-color: transparent;
+    box-shadow: 0 0 20px rgba(67, 245, 242, 0.5);
+}
+
+.glowing-card h3 {
+    color:rgb(244, 244, 244);
+}
+
+/* CSS to decrease image size */
+.ml-image, .ai-image {
+    max-width: 200px; /* Adjust the max-width as needed */
+    height: auto;
+    display: block; /* Center the image horizontally */
+    margin: 0 auto;
+}
+
+.glowing-card p {
+    margin: 25px 25px;
+    font-size: small;
+}
+
+
+/* Add hover effect for cards */
+.glowing-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+/* CSS for the button */
+.btn-custom {
+    display: inline-block;
+    width: fit-content;
+    background-color: #f9004d; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    text-align: center; /* Center the text horizontally */
+    text-decoration: none;
+    font-size: 12px; /* Font size */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter; /* Font weight */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+/* Hover effect */
+.btn-custom:hover {
+    background-color: cyan; /* Change the background color on hover */
+}
+
+/* Additional styling (customize as needed) */
+.btn-custom:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow on focus */
+}
+
+
+/* Process Css  */
+
+.process-wrapper {
+    background: var(--gradient-dark);
+}
+
+.process-wrapper h1,
+.work-wrapper h1 {
+    color: var(--white-color);
+}
+
+.process-wrapper .process-content {
+    padding: 4rem 6rem;
+    position: relative;
+}
+
+.process-wrapper .process-content::after {
+    position: absolute;
+    content: '';
+    width: 40%;
+    margin: auto;
+    bottom: 0;
+    border-bottom: 1px solid var(--white-color);
+}
+
+.process-wrapper .process-content span {
+    color: var(--primary-color);
+    font-size: 7rem;
+    font-weight: 800;
+    margin-right: 2rem;
+}
+/* Footer CSS */
+.footer_wrapper {
+    background: var(--gradient-dark);
+    padding-bottom: 0rem;
+}
+
+.footer_wrapper .footer-logo img {
+    width: 25rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.footer_wrapper h5 {
+    color: var(--white-color);
+    margin-bottom: 2rem;
+    font-weight: 600;
+    transform: capitalize;
+    font-size: 2rem;
+}
+.footer_wrapper h5 a {
+    color: var(--white-color);
+}
+.footer_wrapper ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.footer_wrapper ul li {
+    margin-right: 1.5rem;
+}
+.footer_wrapper .copyright-section p {
+    margin: 0;
+    padding: 3rem 0;
+    text-align: center;
+}
+/* whatsapp intgration */
+.whatsapp-icon {
+    position: relative;
+}
+.whatsapp-icon .whatsapp {
+    position: fixed;
+    width: 6rem;
+    z-index: 1;
+    bottom: 1rem;
+    right: 0.5rem;
+}
+
+.whatsapp-icon .whatsapp img {
+    width: 5.5rem;
+
+}
+
+
+/* ====================================
+gallery CSS
+====================================== */
+body {
+    margin: 0;
+    padding: 0;
+    background: url("bg1.jpg") center/cover no-repeat; /* Background image for the entire page */
+    font-family: Arial, sans-serif;
+}
+
+/* Add your existing CSS styles here */
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+    grid-gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Add hover effect to enlarge images */
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for captions */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* ====================================
+register page
+====================================== */
+
+.registration-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for the form */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.registration-container h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #f9004d;
+}
+
+.registration-form {
+    padding: 20px;
+}
+
+.registration-form label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    display: block;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.registration-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registration-form button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+/* ====================================
+Contact Page CSS
+====================================== */
+
+
+
+.contact .get-in-touch .card {
+    background-color: var(--white-color);
+    min-height: 36rem;
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+.contact .card i {
+    font-size: 8rem;
+    margin-bottom: 3rem;
+}
+.contact .card h4 {
+    font-weight: 800;
+}
+.contact .card p {
+    color: var(--black-color);
+}
+.contact .card p:last-child {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+}
+.form-section {
+    padding: 10rem;
+    background-color: var(--black-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 2rem;
+}
+.form-section .form-control:focus {
+    box-shadow: none;
+    border-color: var(--light-color);
+
+}
+.form-section input.form-control {
+    height: 4.5rem;
+    border: 0.1rem solid var(--light-color);
+    font-size: 1.5rem;
+}
+
+.form-section textarea {
+    border: 0.1rem solid var(--light-color);
+    font-size: 1.5rem;
+}
+
+.iconn:hover {
+    transform: scale(1.2);
+    color: blue;
+    
+}
